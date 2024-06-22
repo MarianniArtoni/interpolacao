@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpolação Polinomial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interpolação Polinomial</h1>
+        <form id="interpolation-form">
+            <div class="form-group">
+                <label for="method">Método de Interpolação:</label>
+                <select id="method" required>
+                    <option value="lagrange">Lagrange</option>
+                    <option value="newton">Newton</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="x-point">Valor de x:</label>
+                <input type="number" id="x-point" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="y-point">Valor de y:</label>
+                <input type="number" id="y-point" step="any" required>
+            </div>
+            <button type="button" id="add-point">Adicionar Ponto</button>
+            <div class="form-group">
+                <label>Pontos Adicionados:</label>
+                <ul id="points-list"></ul>
+            </div>
+            <div class="form-group">
+                <label for="x-value">Valor de x para interpolar:</label>
+                <input type="number" id="x-value" step="any" required>
+            </div>
+            <button type="submit">Interpolar</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
